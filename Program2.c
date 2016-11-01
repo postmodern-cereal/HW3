@@ -10,6 +10,7 @@ main(int argc, char *argv[])
 {
     int num = 0;
     printf("Process name: %s\n\n", argv[0]);
+    printf("Process ID: %d\n", getpid());
     if(argc < 2)
     {
         return;

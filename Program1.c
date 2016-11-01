@@ -11,7 +11,7 @@
 
 main(int argc, char *argv[])
 {
-    Printf("This is program 1. It prints its name and ID.\n");
+    printf("This is program 1. It prints its name and ID.\n");
     printf("Process name: %s\n", argv[0]);
     printf("Process ID: %d\n", getpid());
     printf("Program 1 has finsihed execution.\n");
