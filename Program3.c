@@ -8,7 +8,9 @@
 #include <string.h>
 #include <unistd.h>
 
-main(int argc, char *argv[])
+
+//Main returns an int because make likes it better that way
+int main(int argc, char *argv[])
 {
     printf("Process name: %s\n", argv[0]);
     printf("Process ID: %d\n", getpid());
@@ -16,17 +18,13 @@ main(int argc, char *argv[])
     //child has 0 as return
     char *args[2];
     //char *path = "/home/postmodern_cereal/COS331/hw3/Program1.out";
-    args[0] = "/home/postmodern_cereal/COS331/hw3/Program1.out";
+    args[0] = "Program1.out";
     args[1] = NULL;
     if(!fk)
     {
         printf("Child process name: %s\n", argv[0]);
         printf("Child process ID: %d\n", getpid());
-        int i = 5;
-        /*for(i; i >0; i--)
-        {
-            printf("%d", i);
-        }*/
+        
         printf("\n");
         execv(args[0], args);
         printf("Should not be here\n");
@@ -34,6 +32,7 @@ main(int argc, char *argv[])
     else
     {
         wait();
-        printf("This is the calling parent\n");
+        printf("\nChild process complete. Parent exiting.\n");
     }
+    return 0;
 }

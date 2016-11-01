@@ -9,8 +9,9 @@
 main(int argc, char *argv[])
 {
     int num = 0;
-    printf("Process name: %s\n\n", argv[0]);
-    printf("Process ID: %d\n", getpid());
+    printf("This is program 2 it prints its name, ID, and N custom print statements.\n");
+    printf("Process name: %s\n", argv[0]);
+    printf("Process ID: %d\n\n", getpid());
     if(argc < 2)
     {
         return;
