@@ -12,6 +12,7 @@
 //Main returns an int because make likes it better that way
 int main(int argc, char *argv[])
 {
+    printf("\nThis is program 3. It prints its name and ID, and then runs program 1.\n");
     printf("Process name: %s\n", argv[0]);
     printf("Process ID: %d\n", getpid());
     int fk = fork();

@@ -9,11 +9,14 @@
 main(int argc, char *argv[])
 {
     int num = 0;
-    printf("This is program 2 it prints its name, ID, and N custom print statements.\n");
+    printf("\nThis is program 2. It prints its name, ID, and N custom print statements.\n");
     printf("Process name: %s\n", argv[0]);
     printf("Process ID: %d\n\n", getpid());
     if(argc < 2)
     {
+        //if you reach the inside of this statement, then you did not provide enough arguments
+        //for the program. Should not happen if this program was called by Program4.
+        printf("Too few command line arguments. Exiting.");
         return;
     }
     char *n = argv[1];

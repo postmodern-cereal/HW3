@@ -14,12 +14,12 @@ int main(int argc, char *argv[])
     char *ptr;
     ptr = realpath(testpath, actualPath);
     printf("path: %s\n", actualPath);*/
-    printf("This is program 4. It prints, and then runs program 2.\n");
+    printf("\nThis is program 4. It prints its name and ID, and then runs program 2.\n");
     char *args[3];
     args[0] = "Program2.out";
     args[1] = (argc == 1) ? "12" : argv[1];
     args[2] = NULL;
-    printf("\nProcess name: %s\n", argv[0]);
+    printf("Process name: %s\n", argv[0]);
     printf("Process ID: %d\n", getpid());
     
     int fk = fork();
